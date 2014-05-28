@@ -1,0 +1,30 @@
+<% provide(:title, 'Listing Appointments') %>
+<h1>Listing Appointments</h1>
+<table>
+  <tr>
+    <th>Customer</th>
+    <th>Pet</th>
+    <th>Reason</th>
+    <th>Appointment Date</th>
+    <th>Doctor</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+  <% @appointments.each do |appointment| %>
+      <tr>
+        <td><%= appointment.customer %></td>
+        <td><%= appointment.pet %></td>
+        <td><%= appointment.reason %></td>
+        <td><%= appointment.dated %></td>
+        <td><%= appointment.doctor %> </td>
+        <td><%= link_to 'Show', appointment %></td>
+        <td><%= link_to 'Edit', edit_appointment_path(appointment) %></td>
+        <td><%= link_to 'Destroy', appointment_path(appointment),
+                        method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+      </tr>
+  <% end %>
+</table>
+<br/>
+<%= link_to 'New appointment', new_appointment_path %>

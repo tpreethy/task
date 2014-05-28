@@ -1,0 +1,22 @@
+<p>
+  <strong>Customer:</strong>
+  <%= @appointment.customer %>
+</p>
+<p>
+  <strong>Pet:</strong>
+  <%= @appointment.pet %>
+</p>
+<p>
+  <strong>Reason:</strong>
+  <%= @appointment.reason %>
+</p>
+<p>
+  <strong>Date:</strong>
+  <%= @appointment.dated %>
+</p>
+<p>
+  <strong>Doctor:</strong>
+  <%= @appointment.doctor %>
+</p>
+<%= link_to 'Back', appointments_path %>
+| <%= link_to 'Edit', edit_appointment_path(@appointment) %>

@@ -1,0 +1,35 @@
+<% provide(:title, 'Listing Users')  %>
+<h1>Listing Users</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Address </th>
+    <th>City</th>
+    <th>State</th>
+    <th>Zip code</th>
+    <th>School</th>
+    <th>Years of Practice</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+  <% @users.each do |user| %>
+      <tr>
+        <td><%= user.name %></td>
+        <td><%= user.address %></td>
+        <td><%= user.city %></td>
+        <td><%= user.state %></td>
+        <td><%= user.zip_code %></td>
+        <td><%= user.school %></td>
+        <td><%= user.years_practice %></td>
+        <td><%= link_to 'Show', user %></td>
+        <td><%= link_to 'Edit', edit_user_path(user) %></td>
+        <td><%= link_to 'Destroy', user_path(user),
+                        method: :delete, data: {confirm: 'Are you sure?'} %></td>
+      </tr>
+  <% end %>
+</table>
+<br/>
+<%= link_to 'New user', new_user_path %>

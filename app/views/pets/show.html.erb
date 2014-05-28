@@ -1,0 +1,22 @@
+<p>
+  <strong>Name:</strong>
+  <%= @pet.name %>
+</p>
+<p>
+  <strong>Type:</strong>
+  <%= @pet.pet_type %>
+</p>
+<p>
+  <strong>Breed:</strong>
+  <%= @pet.breed %>
+</p>
+<p>
+  <strong>Age:</strong>
+  <%= @pet.age %>
+</p>
+<p>
+  <strong>Date:</strong>
+  <%= @pet.dated %>
+</p>
+<%= link_to 'Back', pets_path %>
+| <%= link_to 'Edit', edit_pet_path(@pet) %>
